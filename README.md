@@ -1,7 +1,7 @@
 # Discord Server🔵🟦
 https://discord.gg/t2xPXFuNjB
 # WebhookDiscordDeleter-Spammer💻
-A Webhook Deleter o/ Spammer. (image webhook changer requires base64 encoded)
+Discord Multitool (DARKLORD). (image webhook changer requires base64 encoded)
 https://www.base64-image.de
 # Mediafire💻
 https://www.mediafire.com/file/crr5insmnygqeuk/DarkLord4.0.bat/file
