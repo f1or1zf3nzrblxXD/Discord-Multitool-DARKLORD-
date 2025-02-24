@@ -1,5 +1,6 @@
 # WebhookDiscordDeleter-Spammer
-A Webhook Deleter o/ Spammer. (image webhook changer BROKEN🥲)❌
+A Webhook Deleter o/ Spammer. (image webhook changer requires base64 encoded)
+https://www.base64-image.de
 https://www.mediafire.com/file/crr5insmnygqeuk/DarkLord4.0.bat/file
 # Version
 The current version is 3.0, 1.0 and 2.0 is Non-Released.
