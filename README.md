@@ -1,3 +1,5 @@
+# Discord Server🔵🟦
+https://discord.gg/t2xPXFuNjB
 # WebhookDiscordDeleter-Spammer💻
 A Webhook Deleter o/ Spammer. (image webhook changer requires base64 encoded)
 https://www.base64-image.de
@@ -14,5 +16,3 @@ You can check the source code if theres anything connected to a webhook or just 
 # If you need any help.
 Please add discord (f1or1zf3nzrblx)
 and show me whats the problem.
-# Discord Server🔵🟦
-https://discord.gg/t2xPXFuNjB
