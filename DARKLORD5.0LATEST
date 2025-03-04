@@ -1,12 +1,11 @@
 @echo off
-chcp 65001
+chcp 65001 >nul
 title DARK LORD - HACKER MODE
 color 0C
 
 :: PowerShell script to show a notification
 powershell -Command "& {Add-Type -AssemblyName System.Windows.Forms; Add-Type -AssemblyName System.Drawing; $notify = New-Object System.Windows.Forms.NotifyIcon; $notify.Icon = [System.Drawing.SystemIcons]::Warning; $notify.Visible = $true; $notify.ShowBalloonTip(5000, 'DARK LORD | SENT FROM ALAN BECKER''S PC', 'You are using version 3.0(Latest Version) of the batch file.', [System.Windows.Forms.ToolTipIcon]::Warning)}"
 
-:: Main menu
 :menu
 cls
 echo -----------------------------------------------------------------------------------------------------------
@@ -18,20 +17,23 @@ echo                  -██████╔╝██║  ██║██║  �
 echo                  -╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝    ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝ -
 echo -----------------------------------------------------------------------------------------------------------
 
-:: Main menu options
-echo                                     ┌────────────────────────────────┐
-echo                                     │            DARK LORD 3.0       │
-echo                                     ├────────────────────────────────┤
-echo                                     │ 1. Exit                        │
-echo                                     │ 2. Discord webhook spammer     │
-echo                                     │ 3. Delete Discord Webhook      │
-echo                                     │ 4. Rename Discord Webhook      │
-echo                                     │ 5. Change Webhook Image        │
-echo                                     │ 6. Fun Commands                │
-echo                                     │ 7. Change Text Color           │
-echo                                     │ 8. Token Checker               │
-echo                                     │ 9. Set Discord Presence        │
-echo                                     └────────────────────────────────┘
+echo  ┌────────────────────────────────┐   ┌────────────────────────────────┐   ┌────────────────────────────────┐
+echo  │            DARK LORD 4.0       │   │            DARK LORD 4.0       │   │            DARK LORD 4.0       │
+echo  ├────────────────────────────────┤   ├────────────────────────────────┤   ├────────────────────────────────┤
+echo  │ 1. Exit                        │   │ 4. Rename Discord Webhook      │   │ 7. Change Text Color           │
+echo  │ 2. Discord webhook spammer     │   │ 5. Change Webhook Image        │   │ 8. Token Checker               │
+echo  │ 3. Delete Discord Webhook      │   │ 6. Fun Commands                │   │ 9. Set Discord Presence        │
+echo  └────────────────────────────────┘   └────────────────────────────────┘   └────────────────────────────────┘
+
+:: Main menu options - Second Box (Commands 10-12)
+echo  ┌────────────────────────────────┐
+echo  │            DARK LORD 4.0       │
+echo  ├────────────────────────────────┤
+echo  │ 10. Fake Link Checker          │
+echo  │ 11. DDos Attack                │
+echo  └────────────────────────────────┘
+
+:: Prompt for user input
 set /p choice=Enter your choice: 
 
 if "%choice%"=="1" goto :eof
@@ -44,6 +46,32 @@ if "%choice%"=="7" goto changeColor
 if "%choice%"=="8" goto tokenChecker
 if "%choice%"=="9" goto setPresence
 if "%choice%"=="10" goto fakeLinkChecker
+if "%choice%"=="11" goto ddos
+goto menu
+
+:ddos
+cls
+echo ----------------------------------------------------------------------------
+echo │     DDos Attack               │
+echo ├────────────────────────────────┤
+set /p system="Enter target IP address (e.g., 192.168.1.1): "
+echo Attack started at %date% %time% to %system%
+echo ----------------------------------------------------------------------------
+
+:: Attack logic: Sending repeated pings (simulating a DDoS attack)
+set /a count=0
+set /a max_count=10  :: Set the number of pings to send for simulation (10 pings here)
+
+:: Loop to send pings
+:attack_loop
+if %count% geq %max_count% goto attack_end
+ping %system% -n 1 -w 1000 >nul  :: Ping the system with a timeout of 1 second
+set /a count+=1
+goto attack_loop
+
+:attack_end
+echo DDoS attack simulation completed.
+pause
 goto menu
 
 :: Set Discord Presence
